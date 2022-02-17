@@ -92,3 +92,37 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+
+@media all and (min-width: 630px) {
+  /* two column code */
+  #container {
+    display: flex ;
+    align-items: stretch ;
+    flex-flow: row wrap ;
+  }
+  #left-col {
+    order: 1 ;
+    width: 50%;
+  }
+  #right-col {
+    order: 2 ;
+    width: 50% ;
+  }
+}
+@media all and (max-width: 629px) {
+  /* one column code */
+  #container {
+    display: flex ;
+    align-items: stretch ;
+    flex-flow: column wrap ;
+  }
+  #left-col {
+    order: 2 ;
+    width: 100%;
+  }
+  #right-col {
+    order: 1 ;
+    width: 100% ;
+  }
+}

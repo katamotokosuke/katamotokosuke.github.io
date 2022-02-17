@@ -8,6 +8,16 @@ layout: default
   {%-endif-%}
 </header>
 
-{%-include menu_item.html collection=site.data.menu.entries-%}
+
+<div id="container">
+  <div id="left-col">
+    {%-include menu_item.html collection=site.data.menu.entries-%}
+
+  </div>
+  <div id="right-col">
+    {%-include menu_item.html collection=site.data.posts.entries-%}
+  </div>
+</div>
+
 
 {{ content }}

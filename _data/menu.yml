@@ -5,8 +5,7 @@ entries:
         - title: "GitHub Account"
           url: https://github.com/katamotokosuke
         - title: "Email: katamotokosuke0605@gmail.com"
-  - title: Posts
-
+          url : mailto:katamotokosuke@gmail.com
   - title: RSS
     url: feed.xml
-  - title: Another contents
+  - title: Another contents(Coming soon...)
