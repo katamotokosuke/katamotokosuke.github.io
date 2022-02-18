@@ -4,7 +4,7 @@ email: katamotokosuke0605@gmail.com
 description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /:slug.html
-theme: no-style-please
+theme: jekyll-theme-cayman
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
