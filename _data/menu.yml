@@ -1,6 +1,7 @@
 
 entries:
   - title: Abount me
+    url: about
     entries:
         - title: "GitHub Account"
           url: https://github.com/katamotokosuke
