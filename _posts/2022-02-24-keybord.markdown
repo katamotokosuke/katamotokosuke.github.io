@@ -1,0 +1,29 @@
+---
+layout: post
+title: I want to new keyboard
+which_category: diary
+---
+
+## English version note
+I sold my HHKB2 yesterday on [PayPay flea market](https://paypayfleamarket.yahoo.co.jp/).
+The reason is that I wanted a new keyboard.
+
+I think that the following two candidates for purchase.
+- [HHKB hybrid type-s](https://www.pfu.fujitsu.com/direct/hhkb/detail_pd-kb800ws.html)
+- [Keychron K6 Non-Backlight Wireless Mechanical Keyboard](https://www.keychron.com/products/keychron-k6-non-backlight-wireless-mechanical-keyboard)
+
+HHKB2 to HHKB hybrid type-s is not interested
+Going from HHKB2 to HHKB hybrid type-s is not fresh and not interesting.
+However, the Keychron6K is too noisy in terms of keystrokes from the review vide.
+I like the keyboard on my mac and I feel like I can keep it😜
+
+
+## 日本語版
+私は昨日HHKB2をPayPayフリマで売りました。 なぜかというと新しいキーボードが欲しくなったからです。
+
+購入候補は以下を考えている。
+- [HHKB hybrid type-s](https://www.pfu.fujitsu.com/direct/hhkb/detail_pd-kb800ws.html)
+- [Keychron K6 Non-Backlight Wireless Mechanical Keyboard](https://www.keychron.com/products/keychron-k6-non-backlight-wireless-mechanical-keyboard)
+
+HHKB2からHHKB hybrid type-sにするのは新鮮さに欠けて面白みがない。 しかし、KeychronK6のほうはレビュー動画を見た限りでは打鍵音がうるさすぎる。
+Macのキーボードも気に入っているし、そのままでも良い気もする😜
