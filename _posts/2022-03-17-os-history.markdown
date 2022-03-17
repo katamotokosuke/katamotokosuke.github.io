@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OSの歴史
+title: OSの歴史(偏見の塊編)
 which_category: diary
 ---
 
