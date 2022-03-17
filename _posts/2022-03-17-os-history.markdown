@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OSの歴史()
+title: OSの歴史
 which_category: diary
 ---
 
