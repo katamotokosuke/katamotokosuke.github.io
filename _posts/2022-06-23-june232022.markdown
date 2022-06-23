@@ -17,6 +17,7 @@ which_category: diary
 また、平日月曜~木曜はDMM英会話の時間を30分は使うようにしています。
 なので、基本的には英語を集中して取り組む時間は1時間30分/dayという感じになります。
 まぁ足らないのは間違いないので、もっと時間を捻出するなり、より強い意志が必要だとは理解しております。
+でも他にも学習しないといけないこともあるので、うーん大変だ。
 
 
 課題一覧
@@ -26,13 +27,14 @@ which_category: diary
 - スピーキング
   - 発音
   - もっとネイティブに近い言い回し
-- リーディング
+- リスニング
   - 全体的によくわからないのどうにかしたい
 - ライティング
   - 全体的によくわからないのと、時間かかるので面倒なのどうにかしたい
 
 #### 余談
-https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019
+<a href="https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019">https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019</a>
+
 
 そういえば最近ThinkPadのX13sとかいうラップトップが発売されてましたね。
 一番特徴的な部分はラップトップなのにqualcommのsnapdragonが採用されている点でしょう。
