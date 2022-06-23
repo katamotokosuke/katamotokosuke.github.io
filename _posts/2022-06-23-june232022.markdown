@@ -33,7 +33,9 @@ which_category: diary
   - 全体的によくわからないのと、時間かかるので面倒なのどうにかしたい
 
 #### 余談
-<a href="https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019">https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019</a>
+<a href="https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019">
+https://www.lenovo.com/jp/ja/notebooks/thinkpad/x-series/ThinkPad-X13s-13-inch-Snapdragon/p/LEN101T0019
+</a>
 
 
 そういえば最近ThinkPadのX13sとかいうラップトップが発売されてましたね。
