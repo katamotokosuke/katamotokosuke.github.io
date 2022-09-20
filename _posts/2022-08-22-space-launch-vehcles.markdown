@@ -178,5 +178,8 @@ H2-A以外は民間ロケットによるロケットを挙げた。
 https://en.wikipedia.org/wiki/Staged_combustion_cycle
 https://en.wikipedia.org/wiki/Gas-generator_cycle
 https://fanfun.jaxa.jp/faq/detail/6153.html
-https://www.amazon.co.jp/%E5%AE%87%E5%AE%99%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88%E5%B7%A5%E5%AD%A6%E5%85%A5%E9%96%80-%E5%AE%AE%E6%BE%A4-%E6%94%BF%E6%96%87/dp/4254201621
+
+参考にした本
+
+<a href="https://www.amazon.co.jp/%E5%AE%87%E5%AE%99%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88%E5%B7%A5%E5%AD%A6%E5%85%A5%E9%96%80-%E5%AE%AE%E6%BE%A4-%E6%94%BF%E6%96%87/dp/4254201621?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=24IFV9AHD327P&keywords=%E5%AE%87%E5%AE%99%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88%E5%85%A5%E9%96%80&qid=1663675528&sprefix=%E5%AE%87%E5%AE%99%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88%E5%85%A5%E9%96%80%2Caps%2C214&sr=8-5&linkCode=li2&tag=katamotokos09-22&linkId=1ef8d1336b4a522b9a428549bcf65cd1&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4254201621&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=katamotokos09-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=katamotokos09-22&language=ja_JP&l=li2&o=9&a=4254201621" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
