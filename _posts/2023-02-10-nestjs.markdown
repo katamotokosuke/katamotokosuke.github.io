@@ -1,0 +1,203 @@
+---
+layout: post
+title: Nestjsのライフサイクル
+which_category: diary
+---
+
+
+## 概要
+nestjsに実装されている色々なコンポーネントのライフサイクルを実際に動かしてみます。
+
+この記事で取り上げること
+- nestjsの概要
+- nestjsでWEBサーバーを動かす
+- コンポーネントのライフサイクルを理解する
+
+
+## nestjsについて
+<a href="https://github.com/nestjs/nest">nestjs</a>はtypescript及びnodejsで構築するサーバーサイドフレームワークです。
+OOP、FPも出来るみたく、多くの開発者に置いてフレンドリーなフレームワークなのではないかと思います。
+
+<a href="https://github.com/nestjs/nest/blob/master/package.json#L66"> https://github.com/nestjs/nest/blob/master/package.json#L66</a>を参照するとわかるようにexpressを依存として持っており、
+express周辺のエコシステムにあるミドルウェアやライブラリとの親和性が高そう。また、expressを用いたくない場合、<a href="https://github.com/fastify/fastify">fastify</a>をミドルウェアとして採用することも公式でサポートしています。
+
+nestjsにおいて主に登場するコンポーネントは以下に示します。
+- Controller
+- Module
+- Provider
+
+#### Controller
+
+さまざまなFWで登場するイメージ通りのコントローラーという感じです。
+
+<img src="https://i.imgur.com/N1bZbqX.png">
+
+例えばAPIをWEBサーバーに生やしたい場合、このControllerに対してルーティングの設定や、処理を記述します。
+
+例
+
+```typescript
+
+// デコレーター このクラスがControllerのコンポーネントであることをnestjsにわかるようにする
+@Controller('users')
+export class UsersController {
+    // HTTPメソッドがgetであることを示している
+    // 引数になにか文字を指定すればそれがルーティングになる
+    // 今回の例だと http://<domain>/users/となる
+    // ここが例えば@Get("aaa")とかすると http://<domain>/users/aaaとなる
+    @Get()
+    findAll(): string {
+        return 'userを返却する';
+    }
+}
+```
+コンポーネント自体nestjsのcliツールを利用して自動生成するのが便利で良いです。
+
+```shell
+$ nest g controller users
+```
+
+### Provider
+さまざまなコンポーネントがこのプロバイダーとして扱うことが可能です。例えばService、Repository層を分けたい場合、それぞれこのプロバイダーを用いて作成していきます。
+
+<img src="https://i.imgur.com/rHoA6Oz.png">
+※https://docs.nestjs.com/providers
+
+Controller内にビジネスロジックが混入しているといろんなところで似た処理の再利用が別コンポーネントでしにくく、実際にはこのプロバイダーでService層を作成して、そこにビジネスロジックを付与していくような感じになるのが一般的なのかと思います。
+
+```typescript
+// 後述するが、Moduleのproviderに指定することでこのデコレーターでDIすることができる
+@Injectable()
+export class UserService {
+    create(user: User) {
+        // ユーザの作成をするためAPIないしはDBアクセスをする
+        // そのままアクセスを書いても良いが、repository層を用意するのが良さそう
+        TODO("何かする")
+    }
+
+    findAll(): User[] {
+        return [
+            User("aaa", "bbb"),
+            User("ccc", "ddd")
+        ]
+    }
+}
+
+// 別ファイル
+export interface User {
+    name: string;
+    description: string;
+}
+```
+
+Controllerに記述するなら以下のような感じになる
+```typescript
+@Controller('user')
+export class UsersController {
+    // コンストラクターに記載することでDIされたオブジェクトを利用することを明記
+    constructor(private userService: UserService) {}
+
+    @Post()
+    async create(@Body() userDto: UserDto) {
+        const user = this.userService.findByName(user.name)
+        if (user != null) {
+            throw Error("重複エラー")
+        }
+        this.userService.create(createCatDto);
+    }
+
+    @Get()
+    async findAll(): Promise<User[]> {
+        return this.usersService.findAll();
+    }
+}
+```
+
+#### Module
+
+<img src="https://i.imgur.com/Jvyvd2Q.png">
+※ https://docs.nestjs.com/modules
+
+moduleはコンポーネントごとに作ることを想定しています(User, Item, Orderなど)。
+上の画像にあるようにmodule間の依存や関係性について明確になります。
+
+Moduleを書くなら以下のような感じになる
+```typescript
+
+@Module({
+    // このModuleがUsersControllerのインスタンス化の責務を担うことを記述する
+    controllers: [UsersController],
+    // プロバイダーのインスタンス化を行う、このインスタンスはmodule内で共有されるインスタンスとなる
+    providers: [UserService],
+})
+export class UsersModule {}
+```
+
+
+#### その他のコンポーネント
+nestjsには上記で上げたcontroller, provider, module以外にもFWが提供している機能がまだあります。以下のコンポーネントについても紹介しておく。
+
+
+| コンポーネント名 | 役割                                                                      | 備考                       |   |
+|----------|-------------------------------------------------------------------------|--------------------------|---|
+|    middleware      | Controllerのルーティングに到達する前に処理を行いたいときにコードの実行、リクエストの変換などが主な責務                | expressのmiddlewareと同じ扱い。 |   |
+|    guard      | リクエストをハンドラーに渡すべきかどうかという判断を行う責務。ACLの検証とかに使う想定。                           |                          |   |
+|     pipe     | 主な用途は型変換とバリデーション。ここで変換や検証した結果の値がControllerに渡される。                        |                          |   |
+|     interceptor     | AOP(Aspect Oriented Programming)に影響された機能とのこと。関数の結果の変換、関数の振る舞いの拡張などが出来る。 |                          |   |
+|     exceptionfilter     | 例外がスローされたときにハンドリングできる。                                                  |                          |   |
+
+いずれのコンポーネントもAPI単位やグローバルに設定するといったことも可能です。
+
+実際に動かしてみてライフサイクルを確かめる。
+
+<a href="https://github.com/katamotokosuke/nestjs-hello-world">https://github.com/katamotokosuke/nestjs-hello-world </a>
+
+上記リポジトリは↑で挙げたコンポーネントを作り、UsersControllerで利用するように記載した簡単なリポジトリです。
+```
+$ curl http://<domain>/users/1234
+```
+
+起動してcurlを叩くと以下の結果が得られた
+```shell
+middleware called
+guard called
+interceptor 1
+pipe called
+controller called
+interceptor 2
+```
+
+正常にレスポンスまで終えることができたリクエストは `middleware -> guard -> interceptor -> pipe -> controller -> interceptor` の順序で呼び出されていることがわかった。
+
+
+次にルーティングが設定されていないパスで叩いてみると以下の結果が得られた
+```shell
+$ curl http://<domain>/users/test/path/
+```
+
+```shell
+middleware called
+```
+guard以降は呼ばれない。ルーティングが見つからなくても対象と判断された場合、middlewareの実行までは行われるのには注意が必要かもしれないです。
+
+
+次にcontroller処理内で例外が発生した場合
+```shell
+curl -X POST http://localhost:3000/users/ | jq .
+```
+
+```shell
+middleware called
+guard called
+interceptor 1
+exception filter called
+```
+
+`middleware -> guard -> interceptor -> (pipe) -> controller -> exceptionfilter`の順序で呼び出されている。
+
+interceptor2が呼ばれていないのは注意が必要そうです。
+
+### まとめ
+実際にざっくり触ってみて構造はそこまで複雑ではない気がしており、FWの理解自体は比較的容易なのかと思いました。
+また、providerは自由度がやや高いですが、適切にレイヤー分けできれば中規模程度のモノリスシステムでも使えそう？
+他、利用にあたり注意点や知見等あれば共有お願いいたします。
