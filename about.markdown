@@ -4,34 +4,25 @@ title: About Me
 permalink: /about/
 ---
 
-### English
-I'm Kosuke Katamoto.
-My name is `Kosuke` so I want Domain name to be katamoto`kosuke` dot net .
-But, The domain I registered was katamotoko`u`suke dot net. Google is making same [mistake](https://xn--l8je4fxbbxc7s3i7myivhl858f.xn--rhqv96g/google/).
-I am Google nearly.🤫
+### Self introduction with GPT-3
+```
+自己紹介の文章を考えてください。下の箇条書きのところは含めたい文章です。それらをすべて含んだ内容が望ましいです。
+また、必ず面白い文章にしてください。そして10000文字で書いてください。
 
-Well, I am currently a software engineer at Y(2018/8~).
-My work is as a backend engineer. design/development/maintenance/operation.
+- ソフトウェアエンジニア
+- プログラミング言語Ruby, Kotlin, PHP, TypeScriptが書ける
+- バックエンドシステムを開発、運用を担当している
+- 福岡県に住んでいる
+- この文章はchat-GPT 3に書かせている
+- あなたが考える冗談を踏まえてOK
+```
+私はソフトウェアエンジニアです。主にバックエンドシステムの開発と運用を担当しています。プログラミング言語としては、Ruby、Kotlin、PHP、TypeScriptが得意です。この中でも、特にRubyが好きで、Rubyを使ったアプリケーション開発が得意です。もちろん、その他の言語もしっかりと学んでいます。
 
-I also currently live in Fukuoka Pref, which I like because it's moderately sized city and people are kind.
-Let me know if you are coming!
+私は福岡県に住んでいます。福岡は、美味しい食べ物や温かい人々が多く、住みやすいところです。また、テクノロジー関連のイベントも盛んに開催されていて、技術を学ぶのにも最適な場所です。
 
-As a near-term challenge, I would like to increase English-lang communication and contributions to OSS.
+さて、この文章は実は、ChatGPT3によって書かれたものです。chatGPT3は人工知能であり、自然言語処理AIです。日々、世界中の情報を学び、言葉を理解し、自然な文章を生成することができます。
 
-kosuke
-
-### 日本語
-
-私はKosuke Katamotoです。
-発音は「こうすけ」なので「Kosuke」としたいのですが、 サイトドメインが katamotoko`u`suke.netと少し不本意ではない形で登録してしまったのは内緒です🤫
-まあ、Googleも同様の[ミス](https://xn--l8je4fxbbxc7s3i7myivhl858f.xn--rhqv96g/google/) をしているみたいなので、実質Googleということで良いでしょうか？
-
-さて、話は変わりますが、私は現在某Y社にてソフトウェアエンジニアをしています(2018/8~)。
-主な業務としてはバックエンドエンジニアとして設計/開発/保守/運用まで色々やっております。
-また、現在は福岡県に住んでおり、ぼちぼちの規模の都市でかつ人も温かく気に入っています。お越しの際はぜひご連絡を！
-
-目先のチャンレンジとしては英語での発信やOSSへのコントリビュートを増やしていきたいと考えています。
-
+ところで、冗談を言いましょうか？ あるプログラマが言いました。「このコードは動くけど、僕にはなぜ動くかわからない。このコードが動かないときには、僕にはなぜ動かないかもわからない。」笑えますか？私は笑えます。
 
 kosuke
 
