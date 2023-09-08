@@ -3,10 +3,9 @@ entries:
   - title: Abount me
     url: about
     entries:
-        - title: "GitHub Account"
+        - title: "github"
           url: https://github.com/katamotokosuke
-        - title: "Email: katamotokosuke0605@gmail.com"
+        - title: "contact"
           url : mailto:katamotokosuke@gmail.com
   - title: RSS
     url: feed.xml
-  - title: Another contents(Coming soon...)
