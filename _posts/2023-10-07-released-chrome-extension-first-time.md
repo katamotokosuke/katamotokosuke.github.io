@@ -11,7 +11,7 @@ Cambridge Dictionaryをより簡単に使えるChromeのExtensionを作成しま
 
 
 ### 機能の紹介
-<a href="https://imgur.com/F95dO6V">https://imgur.com/F95dO6V </a>
+<a href="https://www.youtube.com/watch?v=DltOFU1lJN4">https://www.youtube.com/watch?v=DltOFU1lJN4 </a>
 
 
 基本的な機能については上記の動画を見てもらえばすぐに理解できるくらいシンプルな機能のみ提供しています。
